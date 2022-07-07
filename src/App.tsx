@@ -41,11 +41,16 @@ const App = () =>{
           side={char.side}
         />
          <Character 
-          x={5} 
-          y={15}
-          side={'down'}
+          x={char2.x} 
+          y={char2.y}
+          side={char2.side}
         />
       </C.Map>
+      <h1>CHAR 2</h1>
+      <button onClick={()=>char2.moveLeft()}>⬅️</button>
+      <button onClick={()=>char2.moveRight()}>➡️</button>
+      <button onClick={()=>char2.moveDown()}>⬇️</button>
+      <button onClick={()=>char2.moveUp()}>⬆️</button>
     </C.Container>
   );
 };
