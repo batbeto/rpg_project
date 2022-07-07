@@ -4,8 +4,8 @@ import { Character } from './components/Character';
 import { useCharacter } from './hooks/useCharacter';
 
 const App = () =>{
-  const char = useCharacter();
-  const char2 = useCharacter();
+  const char = useCharacter('Adalberto');
+  const char2 = useCharacter('Creuzelina');
 
   useEffect(()=>{
     window.addEventListener('keydown', handleKeyDown);
@@ -39,11 +39,13 @@ const App = () =>{
           x={char.x} 
           y={char.y}
           side={char.side}
+          name={char.name}
         />
          <Character 
           x={char2.x} 
           y={char2.y}
           side={char2.side}
+          name={char2.name}
         />
       </C.Map>
       <h1>CHAR 2</h1>
